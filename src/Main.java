@@ -2,17 +2,21 @@ import java.util.Scanner;
 
 public class Main {
     static int number;
+    static int number2;
     static int toDo;
     public static void main(String[] args){
         Scanner scanner = new Scanner(System.in);
 
         FindPrimeFactors primeFactors = new FindPrimeFactors();
+        Find_MCD_or_mcm findMcdOrMcm = new Find_MCD_or_mcm();
 
         while (true){
 
             System.out.println("Tell what to do:");
             System.out.println("Option 0: Count primes");
             System.out.println("Option 1: Find prime factors");
+            System.out.println("Option 2: Find MCD");
+            System.out.println("Option 3: Find mcm");
             toDo = Integer.parseInt(scanner.nextLine());
 
             switch(toDo){
@@ -28,6 +32,24 @@ public class Main {
                     number = Integer.parseInt(scanner.nextLine());
 
                     primeFactors.findAndPrintPrimeFactors(number);
+                    break;
+                case 2:
+                    System.out.println("Find MCD of:");
+                    number = Integer.parseInt(scanner.nextLine());
+                    System.out.println("And:");
+                    number2 = Integer.parseInt(scanner.nextLine());
+                    System.out.println(" ");
+                    System.out.println(findMcdOrMcm.MCD(number, number2));
+                    System.out.println(" ");
+                    break;
+                case 3:
+                    System.out.println("Find mcm of:");
+                    number = Integer.parseInt(scanner.nextLine());
+                    System.out.println("And:");
+                    number2 = Integer.parseInt(scanner.nextLine());
+                    System.out.println(" ");
+                    System.out.println(findMcdOrMcm.mcm(number, number2));
+                    System.out.println(" ");
                     break;
                 default:
                     System.out.println("Invalid thing to do");
