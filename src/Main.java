@@ -4,11 +4,13 @@ public class Main {
     static int number;
     static int number2;
     static int toDo;
+
     public static void main(String[] args){
         Scanner scanner = new Scanner(System.in);
 
         FindPrimeFactors primeFactors = new FindPrimeFactors();
         Find_MCD_or_mcm findMcdOrMcm = new Find_MCD_or_mcm();
+        FibonacciNumbers fibonacciNumbers = new FibonacciNumbers();
 
         while (true){
 
@@ -17,6 +19,7 @@ public class Main {
             System.out.println("Option 1: Find prime factors");
             System.out.println("Option 2: Find MCD");
             System.out.println("Option 3: Find mcm");
+            System.out.println("Option 4: Find Fibonacci numbers");
             toDo = Integer.parseInt(scanner.nextLine());
 
             switch(toDo){
@@ -49,6 +52,12 @@ public class Main {
                     number2 = Integer.parseInt(scanner.nextLine());
                     System.out.println(" ");
                     System.out.println(findMcdOrMcm.mcm(number, number2));
+                    System.out.println(" ");
+                    break;
+                case 4:
+                    System.out.println("Find how many numbers:");
+                    number = Integer.parseInt(scanner.nextLine());
+                    fibonacciNumbers.PrintFibonacciNumbers(number);
                     System.out.println(" ");
                     break;
                 default:
