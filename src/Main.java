@@ -3,13 +3,13 @@ import java.util.Scanner;
 public class Main {
     static int number;
     static int number2;
-    static int toDo;
+    static String toDo;
 
     public static void main(String[] args){
         Scanner scanner = new Scanner(System.in);
 
         FindPrimeFactors primeFactors = new FindPrimeFactors();
-        Find_MCD_or_mcm findMcdOrMcm = new Find_MCD_or_mcm();
+        FindMCDOrmcm findMcdOrMcm = new FindMCDOrmcm();
         FibonacciNumbers fibonacciNumbers = new FibonacciNumbers();
 
         while (true){
@@ -20,23 +20,23 @@ public class Main {
             System.out.println("Option 2: Find MCD");
             System.out.println("Option 3: Find mcm");
             System.out.println("Option 4: Find Fibonacci numbers");
-            toDo = Integer.parseInt(scanner.nextLine());
+            toDo = scanner.nextLine();
 
             switch(toDo){
-                case 0:
+                case "0":
                     System.out.println("Count primes up to:");
                     number = Integer.parseInt(scanner.nextLine());
 
                     startSieve(number);
                     System.out.println(" ");
                     break;
-                case 1:
+                case "1":
                     System.out.println("Find prime factors of:");
                     number = Integer.parseInt(scanner.nextLine());
 
                     primeFactors.findAndPrintPrimeFactors(number);
                     break;
-                case 2:
+                case "2":
                     System.out.println("Find MCD of:");
                     number = Integer.parseInt(scanner.nextLine());
                     System.out.println("And:");
@@ -45,7 +45,7 @@ public class Main {
                     System.out.println(findMcdOrMcm.MCD(number, number2));
                     System.out.println(" ");
                     break;
-                case 3:
+                case "3":
                     System.out.println("Find mcm of:");
                     number = Integer.parseInt(scanner.nextLine());
                     System.out.println("And:");
@@ -54,7 +54,7 @@ public class Main {
                     System.out.println(findMcdOrMcm.mcm(number, number2));
                     System.out.println(" ");
                     break;
-                case 4:
+                case "4":
                     System.out.println("Find how many numbers:");
                     number = Integer.parseInt(scanner.nextLine());
                     fibonacciNumbers.PrintFibonacciNumbers(number);
@@ -62,9 +62,10 @@ public class Main {
                     break;
                 default:
                     System.out.println("Invalid thing to do");
+                    System.out.println(" ");
             }
 
-
+            System.out.println(" ");
 
         }
 

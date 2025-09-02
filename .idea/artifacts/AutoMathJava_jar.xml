@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="AutoMathJava:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/AutoMathJava_jar</output-path>
+    <root id="archive" name="AutoMathJava.jar">
+      <element id="module-output" name="AutoMathJava" />
+    </root>
+  </artifact>
+</component>

@@ -1,4 +1,4 @@
-public class Find_MCD_or_mcm {
+public class FindMCDOrmcm {
     private int a;
     private int b;
 
