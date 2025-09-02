@@ -4,6 +4,7 @@ public class Main {
     static int number;
     static int number2;
     static String toDo;
+    static boolean open = true;
 
     public static void main(String[] args){
         Scanner scanner = new Scanner(System.in);
@@ -12,7 +13,7 @@ public class Main {
         FindMCDOrmcm findMcdOrMcm = new FindMCDOrmcm();
         FibonacciNumbers fibonacciNumbers = new FibonacciNumbers();
 
-        while (true){
+        while (open){
 
             System.out.println("Tell what to do:");
             System.out.println("Option 0: Count primes");
@@ -59,6 +60,9 @@ public class Main {
                     number = Integer.parseInt(scanner.nextLine());
                     fibonacciNumbers.PrintFibonacciNumbers(number);
                     System.out.println(" ");
+                    break;
+                case "exit":
+                    open = false;
                     break;
                 default:
                     System.out.println("Invalid thing to do");
