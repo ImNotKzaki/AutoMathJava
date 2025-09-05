@@ -1,3 +1,5 @@
+package com.math;
+
 public class FindMCDOrmcm {
     private int a;
     private int b;

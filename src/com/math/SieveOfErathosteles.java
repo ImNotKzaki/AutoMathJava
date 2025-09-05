@@ -1,4 +1,4 @@
-import javax.swing.*;
+package com.math;
 
 public class SieveOfErathosteles {
 
