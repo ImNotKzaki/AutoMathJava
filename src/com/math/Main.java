@@ -30,6 +30,13 @@ public class Main {
 
     public static void main(String[] args){
 
+        try{
+            UIManager.setLookAndFeel("com.sun.java.swing.plaf.windows.WindowsLookAndFeel");
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+
+
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(700, 550);
 
